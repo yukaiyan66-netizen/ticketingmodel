@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Ticketing Innovation Model</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(90deg, #1a365d 0%, #2d3748 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        @media (max-width: 900px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .description {
+            background: #f8fafc;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: #2d3748;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        h3 {
+            color: #4a5568;
+            margin: 25px 0 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: #4a5568;
+        }
+        
+        .solution {
+            margin-bottom: 25px;
+            padding: 15px;
+            border-left: 4px solid;
+            border-radius: 4px;
+            background: white;
+        }
+        
+        .revenue {
+            border-color: #48bb78;
+        }
+        
+        .loyalty {
+            border-color: #4299e1;
+        }
+        
+        .control {
+            border-color: #ed64a6;
+        }
+        
+        .highlight-box {
+            background: #ebf8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #3182ce;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 500px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            padding: 12px 20px;
+            background: #4c6ef5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        button:hover {
+            background: #3b5bdb;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        button.active {
+            background: #0d47a1;
+        }
+        
+        .revenue-btn { background: #48bb78; }
+        .revenue-btn:hover { background: #38a169; }
+        .revenue-btn.active { background: #2f855a; }
+        
+        .loyalty-btn { background: #4299e1; }
+        .loyalty-btn:hover { background: #3182ce; }
+        .loyalty-btn.active { background: #2b6cb0; }
+        
+        .control-btn { background: #ed64a6; }
+        .control-btn:hover { background: #d53f8c; }
+        .control-btn.active { background: #b83280; }
+        
+        .legend {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .color-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        
+        .revenue-color { background: #48bb78; }
+        .loyalty-color { background: #4299e1; }
+        .control-color { background: #ed64a6; }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a365d;
+            color: white;
+            margin-top: 30px;
+        }
+        
+        .highlight > rect, .highlight > polygon, .highlight > path {
+            stroke-width: 3px;
+            filter: drop-shadow(0 0 8px currentColor);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sports Ticketing Innovation Solutions Model</h1>
+            <p class="subtitle">A visualization of how three innovative solutions work together to create a sustainable, defensible business model for sports ticketing</p>
+        </header>
+        
+        <div class="content">
+            <div class="description">
+                <h2>Business Model & Technology Integration Innovation</h2>
+                
+                <div class="highlight-box">
+                    <p>The sports ticketing industry faces persistent challenges with scalping, fraud, and lost revenue. These three innovative solutions work together to create a sustainable ecosystem that benefits organizers and fans alike.</p>
+                </div>
+                
+                <div class="solution revenue">
+                    <h3>Secondary Market Monetization</h3>
+                    <p>Transforms the secondary market from a threat into a revenue opportunity. By implementing smart contract-based royalty systems, organizers can capture value from every resale transaction.</p>
+                </div>
+                
+                <div class="solution loyalty">
+                    <h3>Data-Driven Loyalty Program</h3>
+                    <p>Uses first-party data to identify and reward high-value fans with priority access. This increases customer lifetime value and ensures tickets reach genuine fans rather than scalpers.</p>
+                </div>
+                
+                <div class="solution control">
+                    <h3>Programmable Asset Value Control</h3>
+                    <p>Leverages blockchain technology to enforce business rules like price caps and transfer restrictions, preventing fraud and protecting the primary pricing strategy.</p>
+                </div>
+                
+                <div class="controls">
+                    <button class="revenue-btn" onclick="highlightSolution('revenue')">Monetization Path</button>
+                    <button class="loyalty-btn" onclick="highlightSolution('loyalty')">Loyalty Path</button>
+                    <button class="control-btn" onclick="highlightSolution('control')">Control Path</button>
+                    <button onclick="resetHighlight()">Reset View</button>
+                </div>
+                
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="color-box revenue-color"></div>
+                        <span>Secondary Market Monetization</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box loyalty-color"></div>
+                        <span>Data-Driven Loyalty</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="color-box control-color"></div>
+                        <span>Programmable Value Control</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <div class="mermaid">
+flowchart TD
+    A[Sports Ticketing Ecosystem] --> B[Solution Architecture]
+    
+    subgraph B [Three Innovative Solutions]
+        direction LR
+        C[Secondary Market<br>Monetization]
+        D[Data-Driven<br>Loyalty Program]
+        E[Programmable Asset<br>Value Control]
+    end
+
+    C --> F[Smart Contract<br>Revenue-Share Model]
+    F --> G[Automatic 10-15% Royalty<br>on Each Resale]
+    G --> H[Creates Recurring<br>Revenue Stream for Organizers]
+    
+    D --> I[Verified Fan Algorithm]
+    I --> J[Analyzes First-Party Data:<br>Engagement History, Spending Patterns]
+    J --> K[Priority Access for<br>High-Value Fans]
+    K --> L[Increases Customer<br>Lifetime Value CLV]
+    
+    E --> M[Blockchain Governance System]
+    M --> N[Enforces Business Rules:<br>Price Caps, Transfer Restrictions]
+    N --> O[Prevents Fraud &<br>Bot Purchases]
+    
+    subgraph P [Value Creation & Capture]
+        H --> Q[Revenue Diversification]
+        L --> R[Brand Equity Enhancement]
+        O --> S[Cost Reduction &<br>Risk Mitigation]
+    end
+    
+    Q & R & S --> T[Builds Sustainable<br>Ticketing Economic Moat]
+    
+    class C,F,G,H revenue
+    class D,I,J,K,L loyalty
+    class E,M,N,O control
+    class T success
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Sports Ticketing Innovation Model | Business Solution Visualization</p>
+        </footer>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            }
+        });
+        
+        function highlightSolution(solutionType) {
+            resetHighlight();
+            
+            setTimeout(() => {
+                const elements = document.querySelectorAll(`.${solutionType}`);
+                elements.forEach(element => {
+                    element.classList.add('highlight');
+                });
+                
+                // Update button states
+                document.querySelectorAll('button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                document.querySelector(`.${solutionType}-btn`).classList.add('active');
+            }, 100);
+        }
+        
+        function resetHighlight() {
+            const highlighted = document.querySelectorAll('.highlight');
+            highlighted.forEach(element => {
+                element.classList.remove('highlight');
+            });
+            
+            document.querySelectorAll('button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
